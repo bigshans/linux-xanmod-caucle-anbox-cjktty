@@ -81,13 +81,13 @@ fi
 ### IMPORTANT: Do no edit below this line unless you know what you're doing
 
 pkgbase=linux-xanmod-bore-tty
-_major=6.11
-pkgver=${_major}.5
+_major=6.12
+pkgver=${_major}.0
 _branch=6.x
 xanmod=1
 _revision=
-# _sf_branch=edge
-_sf_branch=main
+_sf_branch=edge
+# _sf_branch=main
 _cjk_major=6.9
 pkgrel=${xanmod}
 pkgdesc='Linux Xanmod.'
@@ -113,7 +113,7 @@ options=('!strip')
 _srcname="linux-${pkgver}-xanmod${xanmod}"
 
 source=("https://cdn.kernel.org/pub/linux/kernel/v${_branch}/linux-${_major}.tar."{xz,sign}
-        "patch-${pkgver}-xanmod${xanmod}${_revision}.xz::https://sourceforge.net/projects/xanmod/files/releases/${_sf_branch}/${pkgver}-xanmod${xanmod}/patch-${pkgver}-xanmod${xanmod}.xz/download?use_mirror=pilotfiber"
+        "patch-${pkgver}-xanmod${xanmod}${_revision}.xz::https://master.dl.sourceforge.net/project/xanmod/releases/${_sf_branch}/${pkgver}-xanmod${xanmod}/patch-${pkgver}-xanmod${xanmod}.xz?viasf=1"
         "https://raw.githubusercontent.com/bigshans/cjktty-patches/master/v${_branch}/cjktty-${_cjk_major}.patch"
         "0001.bore.patch"
         choose-gcc-optimization.sh)
@@ -130,11 +130,11 @@ for _patch in ${_patches[@]}; do
     source+=("${_patch}::https://raw.githubusercontent.com/archlinux/svntogit-packages/${_commit}/trunk/${_patch}")
 done
 
-sha256sums=('55d2c6c025ebc27810c748d66325dd5bc601e8d32f8581d9e77673529bdacb2e'
+sha256sums=('b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb'
             'SKIP'
-            '9aaef8ac26daec048e958ba4819ac468ad93bb0e8b6913b7c772a3a289c9aa55'
+            '1ae2a60885a4f2c59b12ea54fdfc30995b67aef49255a51fea66e0e4326491a2'
             '6714bf3968392e29f19e44514d490ad7ec718c3897003210fd1e499017dd429d'
-            '717ac54e5a8261b1a1f93f4ecaa2629dfdff6ff09adf28464b3cad86486c1f6a'
+            '8af019488824046cca610ece0183c0b620c02ffe86dca59cf3778bcbc707c7d6'
             '1ac18cad2578df4a70f9346f7c6fccbb62f042a0ee0594817fdef9f2704904ee')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
