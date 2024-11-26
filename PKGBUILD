@@ -82,7 +82,7 @@ fi
 
 pkgbase=linux-xanmod-bore-tty
 _major=6.12
-pkgver=${_major}.0
+pkgver=${_major}.1
 _branch=6.x
 xanmod=1
 _revision=
@@ -132,7 +132,7 @@ done
 
 sha256sums=('b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb'
             'SKIP'
-            '1ae2a60885a4f2c59b12ea54fdfc30995b67aef49255a51fea66e0e4326491a2'
+            '21f486f5ca92eead76083b1b8ba2e7464a3aec36e097c0039b53d564486aa632'
             '6714bf3968392e29f19e44514d490ad7ec718c3897003210fd1e499017dd429d'
             '8af019488824046cca610ece0183c0b620c02ffe86dca59cf3778bcbc707c7d6'
             '1ac18cad2578df4a70f9346f7c6fccbb62f042a0ee0594817fdef9f2704904ee')
