@@ -1,6 +1,6 @@
 pkgbase = linux-xanmod-bore-tty
 	pkgdesc = Linux Xanmod.
-	pkgver = 6.12.1
+	pkgver = 6.12.3
 	pkgrel = 1
 	url = http://www.xanmod.org/
 	arch = x86_64
@@ -17,7 +17,7 @@ pkgbase = linux-xanmod-bore-tty
 	options = !strip
 	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz
 	source = https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.sign
-	source = patch-6.12.1-xanmod1.xz::https://master.dl.sourceforge.net/project/xanmod/releases/edge/6.12.1-xanmod1/patch-6.12.1-xanmod1.xz?viasf=1
+	source = patch-6.12.3-xanmod1.xz::https://master.dl.sourceforge.net/project/xanmod/releases/edge/6.12.3-xanmod1/patch-6.12.3-xanmod1.xz?viasf=1
 	source = https://raw.githubusercontent.com/bigshans/cjktty-patches/master/v6.x/cjktty-6.9.patch
 	source = 0001.bore.patch
 	source = choose-gcc-optimization.sh
@@ -25,7 +25,7 @@ pkgbase = linux-xanmod-bore-tty
 	validpgpkeys = 647F28654894E3BD457199BE38DBBDC86092693E
 	sha256sums = b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb
 	sha256sums = SKIP
-	sha256sums = 21f486f5ca92eead76083b1b8ba2e7464a3aec36e097c0039b53d564486aa632
+	sha256sums = 9019bd683316794ad4f58b8900819dfc93f47f0f510ead18b232bf679f0d5514
 	sha256sums = 6714bf3968392e29f19e44514d490ad7ec718c3897003210fd1e499017dd429d
 	sha256sums = 8af019488824046cca610ece0183c0b620c02ffe86dca59cf3778bcbc707c7d6
 	sha256sums = 1ac18cad2578df4a70f9346f7c6fccbb62f042a0ee0594817fdef9f2704904ee
