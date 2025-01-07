@@ -82,7 +82,7 @@ fi
 
 pkgbase=linux-xanmod-bore-tty
 _major=6.12
-pkgver=${_major}.6
+pkgver=${_major}.8
 _branch=6.x
 xanmod=1
 _revision=
@@ -132,9 +132,9 @@ done
 
 sha256sums=('b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb'
             'SKIP'
-            '6dbfc1f07f2c3e165e518e8923063b807c84086fcdea51cbb9b737a9f8b01b4b'
+            'c11f4e7dc150721359e5ae91eae2bc1fc2440603c75dd1f6d1ea00cb41e28905'
             '6714bf3968392e29f19e44514d490ad7ec718c3897003210fd1e499017dd429d'
-            '8af019488824046cca610ece0183c0b620c02ffe86dca59cf3778bcbc707c7d6'
+            'b0ffc5f46e42f61ee2ec5b4223134eb15ee21246a0b9bf9ee059a6598aea205f'
             '1ac18cad2578df4a70f9346f7c6fccbb62f042a0ee0594817fdef9f2704904ee')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
