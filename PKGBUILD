@@ -52,9 +52,9 @@ fi
 # Possible values: config_x86-64-v1 (default) / config_x86-64-v2 / config_x86-64-v3 / config_x86-64-v4
 # This will be overwritten by selecting any option in microarchitecture script
 # Source files: https://github.com/xanmod/linux/tree/5.17/CONFIGS/xanmod/gcc
-if [ -z ${_config+x} ]; then
-  _config=config_x86-64-v3
-fi
+# if [ -z ${_config+x} ]; then
+  _config=config
+# fi
 
 # Compress modules with ZSTD (to save disk space)
 if [ -z ${_compress_modules+x} ]; then
@@ -81,13 +81,13 @@ fi
 ### IMPORTANT: Do no edit below this line unless you know what you're doing
 
 pkgbase=linux-xanmod-bore-tty
-_major=6.12
-pkgver=${_major}.10
+_major=6.13
+pkgver=${_major}.0
 _branch=6.x
 xanmod=1
 _revision=
-# _sf_branch=edge
-_sf_branch=main
+_sf_branch=edge
+# _sf_branch=main
 _cjk_major=6.9
 pkgrel=${xanmod}
 pkgdesc='Linux Xanmod.'
@@ -130,11 +130,11 @@ for _patch in ${_patches[@]}; do
     source+=("${_patch}::https://raw.githubusercontent.com/archlinux/svntogit-packages/${_commit}/trunk/${_patch}")
 done
 
-sha256sums=('b1a2562be56e42afb3f8489d4c2a7ac472ac23098f1ef1c1e40da601f54625eb'
+sha256sums=('e79dcc6eb86695c6babfb07c2861912b635d5075c6cd1cd0567d1ea155f80d6e'
             'SKIP'
-            '6d19b142075905765b3850169fa7a173a2e11a14e3038cea4cb248684111f1eb'
+            'c75c34dc9fea5d6d4804173048225525da305039dfe39c7751ec387a96963586'
             '6714bf3968392e29f19e44514d490ad7ec718c3897003210fd1e499017dd429d'
-            'b0ffc5f46e42f61ee2ec5b4223134eb15ee21246a0b9bf9ee059a6598aea205f'
+            'c38960465080786288416f4566663ddabe98887847ce49fca6e794958a10ca2f'
             '1ac18cad2578df4a70f9346f7c6fccbb62f042a0ee0594817fdef9f2704904ee')
 
 export KBUILD_BUILD_HOST=${KBUILD_BUILD_HOST:-archlinux}
@@ -163,7 +163,7 @@ prepare() {
   done
 
   # Applying configuration
-  cp -vf CONFIGS/xanmod/gcc/${_config} .config
+  cp -vf CONFIGS/x86_64/${_config} .config
   # enable LTO_CLANG_THIN
   if [ "${_compiler}" = "clang" ]; then
     scripts/config --disable LTO_CLANG_FULL
